@@ -1,0 +1,17 @@
+eureka:
+  client:
+    eureka-server-port: 8761
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    hostname: localhost 
+    
+microservice:   
+    payment-service:
+      endpoints:
+        endpoint:
+          uri: http://PAYMENT-SERVICE/payments/savePayment
+    order-service:
+      endpoints:
+        endpoint:
+          uri: http://ORDER-SERVICE/orders/doOrder   
